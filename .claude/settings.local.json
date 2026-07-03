@@ -35,7 +35,16 @@
       "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -m 'Add CLAUDE.md project context and README *)",
       "Bash(gh api *)",
       "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -m 'Add GitHub Pages deploy workflow *)",
-      "Bash(gh repo *)"
+      "Bash(gh repo *)",
+      "Bash(gh run *)",
+      "Bash(curl -s -o /dev/null -w \"home: %{http_code}\\\\n\" \"https://cwrealestateai-spec.github.io/chateau-and-capital-website/\")",
+      "Bash(curl -s -o /dev/null -w \"about: %{http_code}\\\\n\" \"https://cwrealestateai-spec.github.io/chateau-and-capital-website/about\")",
+      "Bash(curl -s \"https://cwrealestateai-spec.github.io/chateau-and-capital-website/\")",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(git pull *)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(sh -c 'ahead=$\\(git rev-list --count @{u}..HEAD 2>/dev/null || echo 0\\); if [ \"$ahead\" -gt 0 ]; then echo \"{\\\\\"systemMessage\\\\\":\\\\\"⬆ $ahead unpushed commit\\(s\\) — run git push to publish the site and sync your other computer\\\\\"}\"; fi')"
     ]
   }
 }

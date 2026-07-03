@@ -5,6 +5,20 @@ company and development finance platform headquartered in Lagos, Nigeria.
 The site must read as calm, permanent, and institutional — think Blackstone /
 Brookfield / Rolex, never startup marketing.
 
+## Sync workflow (two machines — keep every edit unified)
+
+This project is edited from two computers. GitHub `main` is the single
+source of truth and every push to it auto-deploys the live site.
+
+- A SessionStart hook (`.claude/settings.json`) runs
+  `git pull --rebase --autostash` automatically, so sessions start from
+  the latest version on either machine.
+- **After completing and verifying a piece of work, commit it and
+  `git push origin main`** in the same turn — don't batch days of work
+  locally. A Stop hook will remind you when unpushed commits exist.
+- Never leave a session with uncommitted changes without telling the
+  user exactly what is unsaved.
+
 ## Stack & commands
 
 - Next.js 15 (App Router) + TypeScript, Tailwind CSS v4 (CSS-first tokens),

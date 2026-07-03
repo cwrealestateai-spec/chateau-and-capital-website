@@ -1,0 +1,27 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "git pull --rebase --autostash origin main >/dev/null 2>&1 && echo '{\"systemMessage\":\"✓ Synced with GitHub — starting from the latest version\"}' || echo '{\"systemMessage\":\"⚠ Could not sync with GitHub (offline or conflict) — run git pull manually before editing\"}'",
+            "timeout": 30,
+            "statusMessage": "Syncing with GitHub…"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "ahead=$(git rev-list --count @{u}..HEAD 2>/dev/null || echo 0); if [ \"$ahead\" -gt 0 ]; then echo \"{\\\"systemMessage\\\":\\\"⬆ $ahead unpushed commit(s) — push to publish the site and sync your other computer\\\"}\"; fi",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

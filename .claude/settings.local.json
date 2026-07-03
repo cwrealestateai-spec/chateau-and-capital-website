@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(brew --version)",
+      "Read(//Applications/**)",
+      "Bash(brew install *)",
+      "Bash(/opt/homebrew/bin/pdftoppm -png -r 100 '/Users/cwrealestateai/Downloads/Chateau  Capital Brand Guide.pdf' /private/tmp/claude-501/-Users-cwrealestateai-chateau-and-capital-wewbsite/3a8e1d3d-140a-4aa5-98b9-46fadd36eea6/scratchpad/brand/page)",
+      "Bash(/opt/homebrew/bin/pdftotext '/Users/cwrealestateai/Downloads/Chateau  Capital Brand Guide.pdf' /private/tmp/claude-501/-Users-cwrealestateai-chateau-and-capital-wewbsite/3a8e1d3d-140a-4aa5-98b9-46fadd36eea6/scratchpad/brand/guide.txt)",
+      "Bash(/opt/homebrew/bin/pdftoppm -png -r 100 '/Users/cwrealestateai/Downloads/Chateau & Capital.pdf' /private/tmp/claude-501/-Users-cwrealestateai-chateau-and-capital-wewbsite/3a8e1d3d-140a-4aa5-98b9-46fadd36eea6/scratchpad/brand/logo)",
+      "Bash(/opt/homebrew/bin/pdftocairo -svg '/Users/cwrealestateai/Downloads/Chateau & Capital.pdf' /private/tmp/claude-501/-Users-cwrealestateai-chateau-and-capital-wewbsite/3a8e1d3d-140a-4aa5-98b9-46fadd36eea6/scratchpad/brand/logo.svg)",
+      "Bash(/opt/homebrew/bin/pdfinfo \"/Users/cwrealestateai/Downloads/Chateau & Capital.pdf\")",
+      "Bash(/opt/homebrew/bin/pdftocairo -svg -f 10 -l 10 '/Users/cwrealestateai/Downloads/Chateau & Capital.pdf' /private/tmp/claude-501/-Users-cwrealestateai-chateau-and-capital-wewbsite/3a8e1d3d-140a-4aa5-98b9-46fadd36eea6/scratchpad/brand/mark.svg)",
+      "Bash(npm run *)",
+      "Bash(/opt/homebrew/bin/pdftocairo -svg -f 7 -l 7 '/Users/cwrealestateai/Downloads/Chateau & Capital.pdf' /private/tmp/claude-501/-Users-cwrealestateai-chateau-and-capital-wewbsite/3a8e1d3d-140a-4aa5-98b9-46fadd36eea6/scratchpad/brand/badge.svg)",
+      "Bash(python3 -)",
+      "Bash(gh auth *)",
+      "Read(//Users/cwrealestateai/**)",
+      "Read(//Users/cwrealestateai/.vercel/**)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -m 'Chateau & Capital website — Next.js, brand-aligned *)"
+    ]
+  }
+}

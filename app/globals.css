@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+/*
+  Chateau & Capital design tokens — from the October 2023 Brand
+  Identity Guidelines.
+  Brand palette: sand #d6cab5, sand deep #cbbda5, slate blue #2a4554,
+  white. Tints and shades below are derived from these four.
+  Typography: Copperplate (highlight/caps) + Georgia (headline/body);
+  Cinzel substitutes for Copperplate where it isn't installed.
+  No bright colours, no gradients.
+*/
+:root {
+  --bg: #f8f5ee;
+  --surface: #ece5d6;
+  --travertine: #d6cab5;
+  --sand: #cbbda5;
+  --ink: #24343f;
+  --graphite: #3c505d;
+  --mist: #5f7280;
+  --line: rgba(42, 69, 84, 0.16);
+  --line-strong: rgba(42, 69, 84, 0.36);
+  --slate: #2a4554;
+  --slate-deep: #203745;
+  --on-slate: #ece5d6;
+  --on-slate-mist: #9fb0ba;
+  --accent: #877453;
+  --accent-soft: #cbbda5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101b22;
+    --surface: #172630;
+    --travertine: #1e3240;
+    --sand: #cbbda5;
+    --ink: #eae4d5;
+    --graphite: #c3bdad;
+    --mist: #93a4ae;
+    --line: rgba(234, 228, 213, 0.14);
+    --line-strong: rgba(234, 228, 213, 0.34);
+    --slate: #1c3341;
+    --slate-deep: #0c161c;
+    --on-slate: #ece5d6;
+    --on-slate-mist: #9fb0ba;
+    --accent: #cbbda5;
+    --accent-soft: #877453;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-travertine: var(--travertine);
+  --color-sand: var(--sand);
+  --color-ink: var(--ink);
+  --color-graphite: var(--graphite);
+  --color-mist: var(--mist);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-slate: var(--slate);
+  --color-slate-deep: var(--slate-deep);
+  --color-on-slate: var(--on-slate);
+  --color-on-slate-mist: var(--on-slate-mist);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --font-serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  --font-sans: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  --font-caps: "Copperplate", "Copperplate Gothic Light",
+    var(--font-cinzel), Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: var(--slate);
+  color: var(--on-slate);
+}
+
+:focus-visible {
+  outline: 1.5px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Copperplate small-caps label — the brand's "highlight type" */
+.eyebrow {
+  font-family: var(--font-caps);
+  font-size: 0.6875rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* Georgia display headline treatment — the brand's "headline type" */
+.display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.serif-quote {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  line-height: 1.3;
+  text-wrap: balance;
+}

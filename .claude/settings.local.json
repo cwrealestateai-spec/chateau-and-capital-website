@@ -32,7 +32,10 @@
       "Bash(curl -s http://localhost:3000/opengraph-image -o \"/private/tmp/claude-501/-Users-cwrealestateai-chateau-and-capital-wewbsite/3a8e1d3d-140a-4aa5-98b9-46fadd36eea6/scratchpad/og2.png\")",
       "Bash(curl -s http://localhost:3000/opengraph-image -o \"/private/tmp/claude-501/-Users-cwrealestateai-chateau-and-capital-wewbsite/3a8e1d3d-140a-4aa5-98b9-46fadd36eea6/scratchpad/og3.png\")",
       "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -m 'SEO and UX hardening *)",
-      "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -m 'Add CLAUDE.md project context and README *)"
+      "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -m 'Add CLAUDE.md project context and README *)",
+      "Bash(gh api *)",
+      "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -m 'Add GitHub Pages deploy workflow *)",
+      "Bash(gh repo *)"
     ]
   }
 }

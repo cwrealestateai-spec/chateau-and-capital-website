@@ -5,6 +5,14 @@ import { Reveal } from "@/components/Reveal";
 import { site } from "@/lib/content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    images: "/opengraph-image",
+    title: "Contact — Chateau & Capital",
+    description:
+      "Begin a conversation with Chateau & Capital — development finance enquiries, investment partnerships, portfolio company matters and careers.",
+    url: "/contact",
+  },
   title: "Contact",
   description:
     "Begin a conversation with Chateau & Capital — development finance enquiries, investment partnerships, portfolio company matters and careers.",

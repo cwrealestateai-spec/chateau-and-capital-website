@@ -20,7 +20,17 @@ export async function generateMetadata({
   const { slug } = await params;
   const company = portfolio.find((c) => c.slug === slug);
   if (!company) return {};
-  return { title: company.name, description: company.summary };
+  return {
+    title: company.name,
+    description: company.summary,
+    alternates: { canonical: `/portfolio/${slug}` },
+    openGraph: {
+    images: "/opengraph-image",
+      title: `${company.name} — Chateau & Capital`,
+      description: company.summary,
+      url: `/portfolio/${slug}`,
+    },
+  };
 }
 
 export default async function PortfolioCompanyPage({

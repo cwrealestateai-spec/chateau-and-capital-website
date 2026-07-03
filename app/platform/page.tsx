@@ -6,6 +6,14 @@ import { Reveal } from "@/components/Reveal";
 import { platformCapabilities } from "@/lib/content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/platform" },
+  openGraph: {
+    images: "/opengraph-image",
+    title: "Operating Platform — Chateau & Capital",
+    description:
+      "Every Chateau & Capital portfolio company draws on shared institutional capabilities — leadership, governance, technology, artificial intelligence, brand, finance and execution frameworks.",
+    url: "/platform",
+  },
   title: "Operating Platform",
   description:
     "Every Chateau & Capital portfolio company draws on shared institutional capabilities — leadership, governance, technology, artificial intelligence, brand, finance and execution frameworks.",

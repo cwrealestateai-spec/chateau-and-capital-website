@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cinzel } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -34,6 +34,29 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f8f5ee" },
+    { media: "(prefers-color-scheme: dark)", color: "#101b22" },
+  ],
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: site.name,
+  alternateName: "Château & Capital",
+  url: site.url,
+  logo: `${site.url}/icon.svg`,
+  description: site.description,
+  email: site.email,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Lagos",
+    addressCountry: "NG",
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -42,6 +65,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={cinzel.variable}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
         <a
           href="#content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-6 focus:z-[60] focus:bg-ink focus:px-4 focus:py-2 focus:text-bg"

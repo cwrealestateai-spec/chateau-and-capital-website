@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ButtonLink,
@@ -17,6 +18,15 @@ import {
   portfolio,
   site,
 } from "@/lib/content";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: `${site.name} — ${site.tagline}`,
+    description: site.description,
+    url: "/",
+  },
+};
 
 export default function HomePage() {
   return (

@@ -6,6 +6,14 @@ import { Reveal } from "@/components/Reveal";
 import { principles } from "@/lib/content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/philosophy" },
+  openGraph: {
+    images: "/opengraph-image",
+    title: "Our Philosophy — Chateau & Capital",
+    description:
+      "Capital alone does not build great companies. People do. Systems do. Culture does. The investment principles that guide every Chateau & Capital decision.",
+    url: "/philosophy",
+  },
   title: "Our Philosophy",
   description:
     "Capital alone does not build great companies. People do. Systems do. Culture does. The investment principles that guide every Chateau & Capital decision.",

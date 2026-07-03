@@ -61,6 +61,9 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
+                aria-current={
+                  pathname.startsWith(item.href) ? "page" : undefined
+                }
                 className={`eyebrow transition-colors duration-300 ${
                   pathname.startsWith(item.href)
                     ? "text-ink"

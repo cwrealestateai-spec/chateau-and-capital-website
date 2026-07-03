@@ -11,6 +11,14 @@ import { Reveal } from "@/components/Reveal";
 import { careersDisciplines, site } from "@/lib/content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/careers" },
+  openGraph: {
+    images: "/opengraph-image",
+    title: "Careers — Chateau & Capital",
+    description:
+      "Build a career measured in decades. Chateau & Capital hires operators, investors, engineers and governance professionals who want their work to compound.",
+    url: "/careers",
+  },
   title: "Careers",
   description:
     "Build a career measured in decades. Chateau & Capital hires operators, investors, engineers and governance professionals who want their work to compound.",

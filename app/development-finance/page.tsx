@@ -12,6 +12,14 @@ import { CapitalStack } from "@/components/CapitalStack";
 import { financeCapabilities } from "@/lib/content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/development-finance" },
+  openGraph: {
+    images: "/opengraph-image",
+    title: "Development Finance — Chateau & Capital",
+    description:
+      "Structured financing for high-quality real estate developments — development, construction, bridge and mezzanine finance, joint ventures, preferred equity and advisory.",
+    url: "/development-finance",
+  },
   title: "Development Finance",
   description:
     "Structured financing for high-quality real estate developments — development, construction, bridge and mezzanine finance, joint ventures, preferred equity and advisory.",

@@ -11,11 +11,15 @@ import type { PortfolioCompany } from "@/lib/content";
 */
 export function PortfolioAccordion({
   companies,
+  headingLevel = "h3",
 }: {
   companies: PortfolioCompany[];
+  /* h2 when the accordion sits directly under the page h1 */
+  headingLevel?: "h2" | "h3";
 }) {
   const [openSlug, setOpenSlug] = useState<string | null>(null);
   const reduce = useReducedMotion();
+  const Heading = headingLevel;
 
   return (
     <div className="divide-y divide-line border-y border-line">
@@ -34,9 +38,9 @@ export function PortfolioAccordion({
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <h3 className="display text-3xl text-ink transition-colors duration-300 group-hover:text-accent md:text-4xl">
+                  <Heading className="display text-3xl text-ink transition-colors duration-300 group-hover:text-accent md:text-4xl">
                     {company.name}
-                  </h3>
+                  </Heading>
                   <p className="eyebrow mt-3 text-mist">
                     {company.discipline}
                   </p>

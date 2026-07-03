@@ -7,6 +7,14 @@ import { PortfolioAccordion } from "@/components/PortfolioAccordion";
 import { portfolio } from "@/lib/content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/portfolio" },
+  openGraph: {
+    images: "/opengraph-image",
+    title: "Portfolio — Chateau & Capital",
+    description:
+      "The Chateau & Capital portfolio — companies built to endure, each retaining its own identity while drawing on shared institutional strength.",
+    url: "/portfolio",
+  },
   title: "Portfolio",
   description:
     "The Chateau & Capital portfolio — companies built to endure, each retaining its own identity while drawing on shared institutional strength.",
@@ -24,7 +32,7 @@ export default function PortfolioPage() {
       <section className="py-24 md:py-32">
         <Container>
           <Reveal>
-            <PortfolioAccordion companies={portfolio} />
+            <PortfolioAccordion companies={portfolio} headingLevel="h2" />
           </Reveal>
           <Reveal delay={0.1}>
             <div className="mt-20 grid gap-8 md:grid-cols-12">

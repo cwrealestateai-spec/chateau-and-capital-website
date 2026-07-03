@@ -6,6 +6,14 @@ import { Reveal } from "@/components/Reveal";
 import { Facade } from "@/components/Facade";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
+  openGraph: {
+    images: "/opengraph-image",
+    title: "About — Chateau & Capital",
+    description:
+      "Chateau & Capital is a private operating investment company and development finance platform headquartered in Lagos, Nigeria. Operators first. Investors second. Builders always.",
+    url: "/about",
+  },
   title: "About",
   description:
     "Chateau & Capital is a private operating investment company and development finance platform headquartered in Lagos, Nigeria. Operators first. Investors second. Builders always.",

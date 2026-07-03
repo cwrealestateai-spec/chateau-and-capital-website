@@ -19,7 +19,19 @@
       "Bash(git init *)",
       "Bash(git add *)",
       "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -m 'Chateau & Capital website — Next.js, brand-aligned *)",
-      "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -m 'Fix capital stack on mobile; add static-export config for GitHub Pages *)"
+      "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -m 'Fix capital stack on mobile; add static-export config for GitHub Pages *)",
+      "Bash(open \"https://github.com/login/device\")",
+      "Bash(STATIC_EXPORT=1 NEXT_PUBLIC_BASE_PATH=/chateau-and-capital-website npm run build)",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -s http://localhost:3000/about)",
+      "Bash(curl -s http://localhost:3000/insights/systems-over-heroics)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s http://localhost:3000/portfolio)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} %{content_type} %{size_download}\\\\n\" http://localhost:3000/opengraph-image)",
+      "Bash(python3 -c \"import sys,re; html=sys.stdin.read\\(\\); print\\('\\\\n'.join\\(re.findall\\(r'<meta [^>]*\\(?:og:|twitter:\\)[^>]*>', html\\)\\)\\); print\\('og:image count:', html.count\\('og:image'\\)\\)\")",
+      "Bash(curl -s http://localhost:3000/opengraph-image -o \"/private/tmp/claude-501/-Users-cwrealestateai-chateau-and-capital-wewbsite/3a8e1d3d-140a-4aa5-98b9-46fadd36eea6/scratchpad/og2.png\")",
+      "Bash(curl -s http://localhost:3000/opengraph-image -o \"/private/tmp/claude-501/-Users-cwrealestateai-chateau-and-capital-wewbsite/3a8e1d3d-140a-4aa5-98b9-46fadd36eea6/scratchpad/og3.png\")",
+      "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -m 'SEO and UX hardening *)"
     ]
   }
 }

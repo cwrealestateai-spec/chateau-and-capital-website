@@ -5,7 +5,7 @@ import { ClosingCTA } from "@/components/ClosingCTA";
 import { Badge } from "@/components/Badge";
 import { Container } from "@/components/primitives";
 import { Reveal } from "@/components/Reveal";
-import { insights } from "@/lib/content";
+import { insights, site } from "@/lib/content";
 
 type Params = { slug: string };
 
@@ -21,7 +21,19 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = insights.find((p) => p.slug === slug);
   if (!post) return {};
-  return { title: post.title, description: post.excerpt };
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: { canonical: `/insights/${slug}` },
+    openGraph: {
+    images: "/opengraph-image",
+      type: "article",
+      title: `${post.title} — Chateau & Capital`,
+      description: post.excerpt,
+      url: `/insights/${slug}`,
+      publishedTime: post.date,
+    },
+  };
 }
 
 export default async function InsightPage({
@@ -35,8 +47,24 @@ export default async function InsightPage({
 
   const others = insights.filter((p) => p.slug !== slug).slice(0, 2);
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    articleSection: post.category,
+    url: `${site.url}/insights/${post.slug}`,
+    author: { "@type": "Organization", name: site.name, url: site.url },
+    publisher: { "@type": "Organization", name: site.name, url: site.url },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <section className="border-b border-line pb-16 pt-40 md:pb-20 md:pt-52">
         <Container>
           <Reveal>

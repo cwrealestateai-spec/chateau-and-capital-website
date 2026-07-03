@@ -5,6 +5,14 @@ import { Container, Eyebrow, SectionHeading } from "@/components/primitives";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/leadership" },
+  openGraph: {
+    images: "/opengraph-image",
+    title: "Leadership — Chateau & Capital",
+    description:
+      "How Chateau & Capital is led and governed — stewardship over celebrity, systems over heroics, and a standard of conduct designed to outlast any individual.",
+    url: "/leadership",
+  },
   title: "Leadership",
   description:
     "How Chateau & Capital is led and governed — stewardship over celebrity, systems over heroics, and a standard of conduct designed to outlast any individual.",

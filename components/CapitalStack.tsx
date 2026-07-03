@@ -13,16 +13,16 @@ export function CapitalStack() {
         <Reveal key={layer.label} delay={0.08 * i} className="w-full">
           <div className="flex justify-center">
             <div
-              style={{ width: widths[i] }}
+              style={{ width: `clamp(230px, ${widths[i]}, 100%)` }}
               className={`border px-5 py-4 text-center md:px-8 md:py-5 ${
                 i === 0
-                  ? "border-slate bg-slate text-on-slate"
+                  ? "border-on-slate-mist/50 bg-slate-deep text-on-slate"
                   : i === 3
                     ? "border-accent/70 bg-travertine text-ink"
                     : "border-line-strong bg-surface text-ink"
               }`}
             >
-              <div className="flex items-baseline justify-between gap-4">
+              <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
                 <span className="font-serif text-base md:text-lg">
                   {layer.label}
                 </span>

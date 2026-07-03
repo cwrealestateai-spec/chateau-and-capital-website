@@ -18,7 +18,8 @@
       "Read(//Users/cwrealestateai/.vercel/**)",
       "Bash(git init *)",
       "Bash(git add *)",
-      "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -m 'Chateau & Capital website — Next.js, brand-aligned *)"
+      "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -m 'Chateau & Capital website — Next.js, brand-aligned *)",
+      "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -m 'Fix capital stack on mobile; add static-export config for GitHub Pages *)"
     ]
   }
 }

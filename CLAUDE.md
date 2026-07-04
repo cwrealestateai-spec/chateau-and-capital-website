@@ -57,8 +57,10 @@ source of truth and every push to it auto-deploys the live site.
 
 ## Known deliberate choices
 
-- Leadership page names no individuals (none provided — ask before inventing
-  people).
+- Leadership: Delani Adewuyi, Founder & Chief Executive, is the only named
+  individual (data in `lib/content.ts` `leadership` array). His bio contains
+  no credentials/history beyond his role — do not invent any; ask for facts
+  before expanding it. Add further leaders to the array only when provided.
 - Contact channels are mailto links; no form backend yet.
 - Emails are placeholders on @chateauandcapital.com.
 - SEO layer is complete: canonicals, per-page OG, generated share card

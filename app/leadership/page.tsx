@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { ClosingCTA } from "@/components/ClosingCTA";
+import { Badge } from "@/components/Badge";
 import { Container, Eyebrow, SectionHeading } from "@/components/primitives";
 import { Reveal } from "@/components/Reveal";
+import { leadership } from "@/lib/content";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/leadership" },
@@ -10,12 +12,12 @@ export const metadata: Metadata = {
     images: "/opengraph-image",
     title: "Leadership — Chateau & Capital",
     description:
-      "How Chateau & Capital is led and governed — stewardship over celebrity, systems over heroics, and a standard of conduct designed to outlast any individual.",
+      "Chateau & Capital is led by founder and chief executive Delani Adewuyi — stewardship over celebrity, systems over heroics, and a standard built to outlast any individual.",
     url: "/leadership",
   },
   title: "Leadership",
   description:
-    "How Chateau & Capital is led and governed — stewardship over celebrity, systems over heroics, and a standard of conduct designed to outlast any individual.",
+    "Chateau & Capital is led by founder and chief executive Delani Adewuyi — stewardship over celebrity, systems over heroics, and a standard built to outlast any individual.",
 };
 
 const tenets = [
@@ -42,11 +44,46 @@ export default function LeadershipPage() {
     <>
       <PageHero
         eyebrow="Leadership"
-        title="Institutions outlast individuals. We are built that way on purpose."
-        lede="Chateau & Capital is led by operators and investors who hold themselves to the same standard they ask of portfolio management teams: candour, discipline and a record that speaks for itself."
+        title="Led with conviction. Built to outlast it."
+        lede="Chateau & Capital is led by its founder and held to a standard designed to survive any individual — including him."
       />
 
-      <section className="py-24 md:py-32">
+      {leadership.map((leader) => (
+        <section key={leader.name} className="py-24 md:py-32">
+          <Container>
+            <div className="grid gap-12 md:grid-cols-12">
+              <Reveal className="md:col-span-4">
+                <Eyebrow>{leader.role}</Eyebrow>
+                <h2 className="display mt-5 text-4xl text-ink md:text-5xl">
+                  {leader.name}
+                </h2>
+                <Badge className="mt-10 hidden h-24 w-24 text-sand md:block" />
+              </Reveal>
+              <div className="md:col-span-7 md:col-start-6">
+                <Reveal>
+                  <p className="serif-quote text-2xl text-ink md:text-3xl">
+                    “{leader.quote}”
+                  </p>
+                </Reveal>
+                <Reveal delay={0.08}>
+                  <div className="mt-10 space-y-6">
+                    {leader.bio.map((para) => (
+                      <p
+                        key={para.slice(0, 24)}
+                        className="text-base leading-relaxed text-graphite"
+                      >
+                        {para}
+                      </p>
+                    ))}
+                  </div>
+                </Reveal>
+              </div>
+            </div>
+          </Container>
+        </section>
+      ))}
+
+      <section className="border-t border-line bg-surface py-24 md:py-32">
         <Container>
           <Reveal>
             <SectionHeading
@@ -61,9 +98,9 @@ export default function LeadershipPage() {
                   <p className="eyebrow text-accent">
                     {String(i + 1).padStart(2, "0")}
                   </p>
-                  <h2 className="display mt-4 text-2xl text-ink">
+                  <h3 className="display mt-4 text-2xl text-ink">
                     {tenet.title}
-                  </h2>
+                  </h3>
                   <p className="mt-4 text-sm leading-relaxed text-mist">
                     {tenet.body}
                   </p>
@@ -74,23 +111,23 @@ export default function LeadershipPage() {
         </Container>
       </section>
 
-      <section className="border-t border-line bg-surface py-24 md:py-32">
+      <section className="py-24 md:py-32">
         <Container>
           <div className="grid gap-12 md:grid-cols-12">
             <Reveal className="md:col-span-4">
-              <Eyebrow>The Team</Eyebrow>
+              <Eyebrow>The Wider Team</Eyebrow>
             </Reveal>
             <div className="md:col-span-8">
               <Reveal>
                 <p className="serif-quote text-2xl text-ink md:text-3xl">
-                  We publish results, not personalities.
+                  Behind the firm stands a team of operators, underwriters and
+                  specialists across the platform and its portfolio companies.
                 </p>
                 <p className="mt-8 max-w-2xl text-base leading-relaxed text-mist">
-                  Detailed profiles of the firm&apos;s partners and senior
-                  leadership are shared with counterparties in the course of an
-                  engagement. If you are considering working with us — as an
-                  investor, developer, founder or future colleague — we would
-                  welcome the introduction.
+                  Their detailed profiles are shared with counterparties in the
+                  course of an engagement. If you are considering working with
+                  us — as an investor, developer, founder or future colleague —
+                  we would welcome the introduction.
                 </p>
               </Reveal>
             </div>

@@ -388,6 +388,27 @@ export const insights: Insight[] = [
   },
 ];
 
+export type Leader = {
+  name: string;
+  role: string;
+  quote: string;
+  bio: string[];
+};
+
+export const leadership: Leader[] = [
+  {
+    name: "Delani Adewuyi",
+    role: "Founder & Chief Executive",
+    quote:
+      "We are not building for the next quarter. We are building an institution the next generation will recognise.",
+    bio: [
+      "Delani Adewuyi founded Chateau & Capital on a conviction: that Africa's next great businesses will be built by permanent owners — operators who invest for decades, install systems that outlast them, and treat reputation as the asset that compounds fastest.",
+      "As Chief Executive, he leads the firm's principal investment activity, its development finance platform and the operating companies in its portfolio — spanning real estate advisory, property intelligence and the shared institutional capabilities every company draws on.",
+      "He holds the firm to the same standard it asks of the management teams it backs: candour about the numbers, discipline in what it declines, and a record that speaks for itself.",
+    ],
+  },
+];
+
 export const closingStatement =
   "The institutions that shape tomorrow are built through disciplined thinking today.";
 

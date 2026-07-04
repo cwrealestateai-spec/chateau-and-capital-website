@@ -50,6 +50,11 @@ const organizationSchema = {
   logo: `${site.url}/icon.svg`,
   description: site.description,
   email: site.email,
+  founder: {
+    "@type": "Person",
+    name: "Delani Adewuyi",
+    jobTitle: "Founder & Chief Executive",
+  },
   address: {
     "@type": "PostalAddress",
     addressLocality: "Lagos",

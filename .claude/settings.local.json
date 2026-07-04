@@ -44,7 +44,9 @@
       "Skill(update-config:*)",
       "Bash(git pull *)",
       "Bash(echo \"exit: $?\")",
-      "Bash(sh -c 'ahead=$\\(git rev-list --count @{u}..HEAD 2>/dev/null || echo 0\\); if [ \"$ahead\" -gt 0 ]; then echo \"{\\\\\"systemMessage\\\\\":\\\\\"⬆ $ahead unpushed commit\\(s\\) — run git push to publish the site and sync your other computer\\\\\"}\"; fi')"
+      "Bash(sh -c 'ahead=$\\(git rev-list --count @{u}..HEAD 2>/dev/null || echo 0\\); if [ \"$ahead\" -gt 0 ]; then echo \"{\\\\\"systemMessage\\\\\":\\\\\"⬆ $ahead unpushed commit\\(s\\) — run git push to publish the site and sync your other computer\\\\\"}\"; fi')",
+      "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -m 'Leadership: feature Delani Adewuyi, Founder & Chief Executive *)",
+      "Bash(git push *)"
     ]
   }
 }

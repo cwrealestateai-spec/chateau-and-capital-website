@@ -14,7 +14,29 @@
       "Bash(git pull *)",
       "Bash(STATIC_EXPORT=1 npm run build)",
       "Bash(zip -rq ~/Desktop/chateau-and-capital-hostinger.zip .)",
-      "Read(//Users/cwrealestateai/Desktop/**)"
+      "Read(//Users/cwrealestateai/Desktop/**)",
+      "Bash(dig +short www.chateauandcapital.com)",
+      "Bash(curl -sL -o /dev/null -w \"www -> %{url_effective} %{http_code}\\\\n\" --max-time 15 \"https://www.chateauandcapital.com/\")",
+      "Bash(curl -s -o /dev/null -w \"status: %{http_code}  content-type: %{content_type}\\\\n\" --max-time 15 -A \"Mozilla/5.0 \\(compatible; Googlebot/2.1; +http://www.google.com/bot.html\\)\" \"https://chateauandcapital.com/sitemap.xml\")",
+      "Bash(curl -s --max-time 15 \"https://chateauandcapital.com/sitemap.xml\")",
+      "Bash(git rev-list *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"live homepage: HTTP %{http_code}\\\\n\" \"https://cwrealestateai-spec.github.io/chateau-and-capital-website/\")",
+      "Bash(curl -s -o /dev/null -w \"live leadership: HTTP %{http_code}\\\\n\" \"https://cwrealestateai-spec.github.io/chateau-and-capital-website/leadership\")",
+      "Bash(curl -s --max-time 20 \"https://www.chateauandcapital.com/leadership\" -o /private/tmp/claude-501/-Users-cwrealestateai-chateau-and-capital-wewbsite/4f148f0a-57cd-44ac-a2ad-fdb9c463b0a9/scratchpad/live-leadership.html)",
+      "Bash(curl -s --max-time 20 -H 'Authorization: Bearer 7u2pQ1XmyuLCA8akTFLk4OJ7DvO2UCxDs0MlGqO2f469d97c' https://developers.hostinger.com/api/domains/v1/portfolio)",
+      "Bash(curl -s --max-time 20 -H 'Authorization: Bearer 7u2pQ1XmyuLCA8akTFLk4OJ7DvO2UCxDs0MlGqO2f469d97c' https://developers.hostinger.com/api/dns/v1/zones/chateauandcapital.com)",
+      "Bash(dig +short chateauandcapital.com)",
+      "Bash(curl -s --max-time 20 -H 'Authorization: Bearer 7u2pQ1XmyuLCA8akTFLk4OJ7DvO2UCxDs0MlGqO2f469d97c' https://developers.hostinger.com/api/billing/v1/subscriptions)",
+      "Bash(python3 -c \"import sys,json; [print\\(s.get\\('name'\\), '|', s.get\\('status'\\), '|ends:', s.get\\('expires_at','?'\\)\\) for s in json.load\\(sys.stdin\\)]\")",
+      "Bash(unzip -l ~/Desktop/chateau-capital-site.zip)",
+      "Bash(git add *)",
+      "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -qm 'Auto-build hostinger-dist branch on every push to main *)",
+      "Bash(git -c http.version=HTTP/1.1 push -q origin main)",
+      "Bash(gh run *)",
+      "Bash(curl -s --max-time 30 \"https://raw.githubusercontent.com/cwrealestateai-spec/chateau-and-capital-website/hostinger-dist/leadership.html\")",
+      "Bash(curl -s --max-time 30 \"https://raw.githubusercontent.com/cwrealestateai-spec/chateau-and-capital-website/hostinger-dist/.htaccess\")",
+      "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -qm 'Stamp build.txt marker into Hostinger dist for deploy verification *)"
     ]
   }
 }

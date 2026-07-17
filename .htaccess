@@ -1,0 +1,29 @@
+# Chateau & Capital — static hosting rules (Hostinger / Apache / LiteSpeed)
+
+Options -MultiViews
+DirectorySlash Off
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect /foo/ -> /foo (directory URLs back to clean page URLs)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# Serve clean URLs: /about -> about.html
+# (no directory guard: page files win over same-named folders,
+#  e.g. /portfolio -> portfolio.html even though portfolio/ exists)
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+ErrorDocument 404 /404.html
+
+# Long-cache immutable build assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  <FilesMatch "\.(js|css|woff2|png|jpg|svg)$">
+    ExpiresDefault "access plus 1 year"
+  </FilesMatch>
+</IfModule>

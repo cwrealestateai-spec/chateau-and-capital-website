@@ -393,12 +393,20 @@ export type Leader = {
   role: string;
   quote: string;
   bio: string[];
+  /* portrait is optional — leaders without one get a branded placeholder */
+  portrait?: { src: string; width: number; height: number; alt: string };
 };
 
 export const leadership: Leader[] = [
   {
     name: "Delani Adewuyi",
     role: "Founder & Chief Executive",
+    portrait: {
+      src: "/leadership/delani-adewuyi.jpg",
+      width: 1287,
+      height: 1600,
+      alt: "Delani Adewuyi, Founder & Chief Executive of Chateau & Capital, seated at a desk in a dark suit",
+    },
     quote:
       "We are not building for the next quarter. We are building an institution the next generation will recognise.",
     bio: [

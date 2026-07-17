@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { ClosingCTA } from "@/components/ClosingCTA";
-import { Badge } from "@/components/Badge";
+import { ColumnMark } from "@/components/ColumnMark";
 import { Container, Eyebrow, SectionHeading } from "@/components/primitives";
 import { Reveal } from "@/components/Reveal";
 import { leadership } from "@/lib/content";
@@ -52,31 +53,49 @@ export default function LeadershipPage() {
         <section key={leader.name} className="py-24 md:py-32">
           <Container>
             <div className="grid gap-12 md:grid-cols-12">
-              <Reveal className="md:col-span-4">
+              {/* Deliberately not animated: the principal's profile must
+                  never depend on a scroll observer to become visible. */}
+              <div className="md:col-span-4">
                 <Eyebrow>{leader.role}</Eyebrow>
                 <h2 className="display mt-5 text-4xl text-ink md:text-5xl">
                   {leader.name}
                 </h2>
-                <Badge className="mt-10 hidden h-24 w-24 text-sand md:block" />
-              </Reveal>
-              <div className="md:col-span-7 md:col-start-6">
-                <Reveal>
-                  <p className="serif-quote text-2xl text-ink md:text-3xl">
-                    “{leader.quote}”
-                  </p>
-                </Reveal>
-                <Reveal delay={0.08}>
-                  <div className="mt-10 space-y-6">
-                    {leader.bio.map((para) => (
-                      <p
-                        key={para.slice(0, 24)}
-                        className="text-base leading-relaxed text-graphite"
-                      >
-                        {para}
-                      </p>
-                    ))}
+                {/* Portrait sits directly under the name; leaders without
+                    one get a quiet branded placeholder in the same frame. */}
+                {leader.portrait ? (
+                  <figure className="mt-10">
+                    <Image
+                      src={leader.portrait.src}
+                      width={leader.portrait.width}
+                      height={leader.portrait.height}
+                      alt={leader.portrait.alt}
+                      priority
+                      className="aspect-[4/5] w-full max-w-sm border border-line object-cover"
+                    />
+                  </figure>
+                ) : (
+                  <div
+                    aria-hidden
+                    className="mt-10 flex aspect-[4/5] w-full max-w-sm items-center justify-center border border-line bg-surface"
+                  >
+                    <ColumnMark className="h-16 w-auto text-ink/15" />
                   </div>
-                </Reveal>
+                )}
+              </div>
+              <div className="md:col-span-7 md:col-start-6">
+                <p className="serif-quote text-2xl text-ink md:text-3xl">
+                  “{leader.quote}”
+                </p>
+                <div className="mt-10 space-y-6">
+                  {leader.bio.map((para) => (
+                    <p
+                      key={para.slice(0, 24)}
+                      className="text-base leading-relaxed text-graphite"
+                    >
+                      {para}
+                    </p>
+                  ))}
+                </div>
               </div>
             </div>
           </Container>

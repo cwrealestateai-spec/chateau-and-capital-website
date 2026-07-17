@@ -36,7 +36,12 @@
       "Bash(gh run *)",
       "Bash(curl -s --max-time 30 \"https://raw.githubusercontent.com/cwrealestateai-spec/chateau-and-capital-website/hostinger-dist/leadership.html\")",
       "Bash(curl -s --max-time 30 \"https://raw.githubusercontent.com/cwrealestateai-spec/chateau-and-capital-website/hostinger-dist/.htaccess\")",
-      "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -qm 'Stamp build.txt marker into Hostinger dist for deploy verification *)"
+      "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -qm 'Stamp build.txt marker into Hostinger dist for deploy verification *)",
+      "Bash(mkdir -p public/leadership)",
+      "Bash(sips -s format jpeg -s formatOptions 85 -Z 1600 \"/Users/cwrealestateai/Downloads/DC1D6981-01E5-48D3-888F-041DD5D73897.PNG\" --out public/leadership/delani-adewuyi.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight public/leadership/delani-adewuyi.jpg)",
+      "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -qm 'Leadership: add Delani Adewuyi portrait beneath name *)",
+      "Bash(break)"
     ]
   }
 }

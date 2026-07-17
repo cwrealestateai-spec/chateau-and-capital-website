@@ -9,14 +9,14 @@ export const metadata: Metadata = {
   alternates: { canonical: "/platform" },
   openGraph: {
     images: "/opengraph-image",
-    title: "Operating Platform — Chateau & Capital",
+    title: "Operating Platform | Chateau & Capital",
     description:
-      "Every Chateau & Capital portfolio company draws on shared institutional capabilities — leadership, governance, technology, artificial intelligence, brand, finance and execution frameworks.",
+      "Every Chateau & Capital portfolio company draws on shared institutional capabilities: leadership, governance, technology, artificial intelligence, brand, finance and execution frameworks.",
     url: "/platform",
   },
   title: "Operating Platform",
   description:
-    "Every Chateau & Capital portfolio company draws on shared institutional capabilities — leadership, governance, technology, artificial intelligence, brand, finance and execution frameworks.",
+    "Every Chateau & Capital portfolio company draws on shared institutional capabilities: leadership, governance, technology, artificial intelligence, brand, finance and execution frameworks.",
 };
 
 export default function PlatformPage() {
@@ -25,7 +25,7 @@ export default function PlatformPage() {
       <PageHero
         eyebrow="Operating Platform"
         title="Institutional strength, shared by every company."
-        lede="Every portfolio company retains its own identity — and draws on capabilities no standalone business its size could build alone. The platform is how one company's lesson becomes every company's advantage."
+        lede="Every portfolio company retains its own identity, and draws on capabilities no standalone business its size could build alone. The platform is how one company's lesson becomes every company's advantage."
       />
 
       <section className="py-24 md:py-32">

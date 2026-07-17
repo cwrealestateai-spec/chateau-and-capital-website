@@ -15,26 +15,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/development-finance" },
   openGraph: {
     images: "/opengraph-image",
-    title: "Development Finance — Chateau & Capital",
+    title: "Development Finance | Chateau & Capital",
     description:
-      "Structured financing for high-quality real estate developments — development, construction, bridge and mezzanine finance, joint ventures, preferred equity and advisory.",
+      "Structured financing for high-quality real estate developments: development, construction, bridge and mezzanine finance, joint ventures, preferred equity and advisory.",
     url: "/development-finance",
   },
   title: "Development Finance",
   description:
-    "Structured financing for high-quality real estate developments — development, construction, bridge and mezzanine finance, joint ventures, preferred equity and advisory.",
+    "Structured financing for high-quality real estate developments: development, construction, bridge and mezzanine finance, joint ventures, preferred equity and advisory.",
 };
 
 const process = [
   {
     step: "01",
     title: "Feasibility & Research",
-    body: "Every engagement begins with evidence: demand studies, comparable analysis and an honest feasibility model. Most projects end here — by design.",
+    body: "Every engagement begins with evidence: demand studies, comparable analysis and an honest feasibility model. Most projects end here, by design.",
   },
   {
     step: "02",
     title: "Underwriting",
-    body: "We reconstruct the project from first principles — land, title, cost, programme and exit — and stress each assumption until it breaks or holds.",
+    body: "We reconstruct the project from first principles, from land and title to cost, programme and exit, and stress each assumption until it breaks or holds.",
   },
   {
     step: "03",
@@ -54,7 +54,7 @@ export default function DevelopmentFinancePage() {
       <PageHero
         eyebrow="Development Finance"
         title="Capital for projects that shape cities."
-        lede="We provide structured financing solutions for high-quality real estate developments — working with experienced developers, institutional investors, landowners and family offices to unlock projects that create lasting value."
+        lede="We provide structured financing solutions for high-quality real estate developments, working with experienced developers, institutional investors, landowners and family offices to unlock projects that create lasting value."
       />
 
       <section className="py-24 md:py-32">

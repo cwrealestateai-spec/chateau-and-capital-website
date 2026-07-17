@@ -2,7 +2,7 @@ import { useId } from "react";
 import { ColumnMarkPaths } from "@/components/ColumnMark";
 
 /*
-  The Chateau & Capital badge — the logomark ringed by the brand name,
+  The Chateau & Capital badge: the logomark ringed by the brand name,
   used as a seal or accent per the brand guidelines. Ring and mark take
   currentColor; the encircling letters are "cut out" in the colour of
   the ground the badge sits on (`cutout`), matching the official seal.

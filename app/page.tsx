@@ -22,7 +22,7 @@ import {
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
   openGraph: {
-    title: `${site.name} — ${site.tagline}`,
+    title: `${site.name} | ${site.tagline}`,
     description: site.description,
     url: "/",
   },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      {/* 01 — Hero */}
+      {/* 01 · Hero */}
       <section className="relative flex min-h-svh flex-col justify-end overflow-hidden border-b border-line">
         <Facade className="pointer-events-none absolute bottom-0 right-0 h-[70%] w-full max-w-4xl text-ink/[0.07] md:w-2/3" />
         <Container className="relative pb-20 pt-44 md:pb-28">
@@ -53,7 +53,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 02 — Who We Are */}
+      {/* 02 · Who We Are */}
       <section className="py-24 md:py-36">
         <Container>
           <div className="grid gap-12 md:grid-cols-12">
@@ -73,7 +73,7 @@ export default function HomePage() {
                   <p className="text-base leading-relaxed text-mist">
                     Unlike holding companies that passively own assets, Chateau
                     &amp; Capital actively partners with management teams to
-                    build stronger businesses — improving execution, installing
+                    build stronger businesses: improving execution, installing
                     systems, strengthening governance and allocating capital
                     where it creates the greatest long-term returns.
                   </p>
@@ -98,14 +98,14 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 03 — Capabilities */}
+      {/* 03 · Capabilities */}
       <section className="border-y border-line bg-surface py-24 md:py-36">
         <Container>
           <Reveal>
             <SectionHeading
               eyebrow="Our Capabilities"
               title="Five disciplines. One standard."
-              lede="Each capability strengthens the others — operating expertise informs our investing, and investment discipline sharpens how we operate."
+              lede="Each capability strengthens the others: operating expertise informs our investing, and investment discipline sharpens how we operate."
             />
           </Reveal>
           <div className="mt-16 divide-y divide-line border-y border-line">
@@ -137,7 +137,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 04 — Featured Portfolio */}
+      {/* 04 · Featured Portfolio */}
       <section className="py-24 md:py-36">
         <Container>
           <Reveal>
@@ -158,7 +158,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 05 — Development Finance */}
+      {/* 05 · Development Finance */}
       <section className="border-y border-line bg-slate py-24 text-on-slate md:py-36">
         <Container>
           <div className="grid gap-16 lg:grid-cols-2">
@@ -168,7 +168,7 @@ export default function HomePage() {
                   tone="onDark"
                   eyebrow="Development Finance"
                   title="Capital, structured with conviction"
-                  lede="We provide structured financing for high-quality real estate developments — working with experienced developers, institutional investors, landowners and family offices to unlock projects that shape cities."
+                  lede="We provide structured financing for high-quality real estate developments, working with experienced developers, institutional investors, landowners and family offices to unlock projects that shape cities."
                 />
               </Reveal>
               <Reveal delay={0.1}>
@@ -194,7 +194,7 @@ export default function HomePage() {
             <div className="flex flex-col justify-center">
               <Reveal>
                 <p className="eyebrow mb-8 text-center text-on-slate-mist">
-                  The Capital Stack — from foundation to partnership
+                  The Capital Stack, from foundation to partnership
                 </p>
               </Reveal>
               <CapitalStack />
@@ -203,7 +203,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 06 — Investment Philosophy */}
+      {/* 06 · Investment Philosophy */}
       <section className="py-24 md:py-36">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
@@ -229,7 +229,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 07 — Insights */}
+      {/* 07 · Insights */}
       <section className="border-t border-line bg-surface py-24 md:py-36">
         <Container>
           <Reveal>
@@ -267,7 +267,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 08 — Closing Statement */}
+      {/* 08 · Closing Statement */}
       <ClosingCTA />
     </>
   );

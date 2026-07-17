@@ -1,5 +1,5 @@
 /*
-  Architectural line motif — a quiet colonnade elevation drawn in
+  Architectural line motif: a quiet colonnade elevation drawn in
   hairline strokes. Used as texture, never decoration for its own sake.
   Inherits currentColor so it works on ivory and slate grounds alike.
 */

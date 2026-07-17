@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
   openGraph: {
     images: "/opengraph-image",
-    title: "About — Chateau & Capital",
+    title: "About | Chateau & Capital",
     description:
       "Chateau & Capital is a private operating investment company and development finance platform headquartered in Lagos, Nigeria. Operators first. Investors second. Builders always.",
     url: "/about",
@@ -26,7 +26,7 @@ const pillars = [
   },
   {
     title: "Vision",
-    body: "To become Africa's most respected operating investment company — recognised for building enduring businesses, financing transformative developments and creating institutional platforms that outlast generations.",
+    body: "To become Africa's most respected operating investment company, recognised for building enduring businesses, financing transformative developments and creating institutional platforms that outlast generations.",
   },
   {
     title: "Mission",
@@ -67,7 +67,7 @@ export default function AboutPage() {
                 </p>
                 <p className="mt-6 text-base leading-relaxed text-mist">
                   Everything we do is guided by long-term thinking. We optimise
-                  for decades, not quarters — which changes what we buy, how we
+                  for decades, not quarters, which changes what we buy, how we
                   build, whom we hire and when we sell, which is rarely.
                 </p>
               </Reveal>
@@ -100,7 +100,7 @@ export default function AboutPage() {
             <SectionHeading
               eyebrow="What We Do"
               title="One firm, five disciplines"
-              lede="Operating companies, development finance, principal investments, real estate development and a shared operating platform — each discipline compounding the others."
+              lede="Operating companies, development finance, principal investments, real estate development and a shared operating platform, each discipline compounding the others."
             />
           </Reveal>
           <div className="mt-14 grid gap-10 md:grid-cols-2">
@@ -111,7 +111,7 @@ export default function AboutPage() {
               },
               {
                 title: "Development Finance",
-                body: "Structured financing solutions for high-quality real estate developments — construction, bridge and mezzanine finance, joint ventures, preferred equity and advisory.",
+                body: "Structured financing solutions for high-quality real estate developments: construction, bridge and mezzanine finance, joint ventures, preferred equity and advisory.",
               },
               {
                 title: "Principal Investments",

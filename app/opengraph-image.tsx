@@ -7,7 +7,7 @@ export const dynamic = "force-static";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt =
-  "Chateau & Capital — Building Enduring Businesses. Financing the Future.";
+  "Chateau & Capital | Building Enduring Businesses. Financing the Future.";
 
 /*
   Satori (the OG renderer) has partial inline-SVG support, so the

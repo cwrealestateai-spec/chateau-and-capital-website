@@ -28,7 +28,7 @@ export async function generateMetadata({
     openGraph: {
     images: "/opengraph-image",
       type: "article",
-      title: `${post.title} — Chateau & Capital`,
+      title: `${post.title} | Chateau & Capital`,
       description: post.excerpt,
       url: `/insights/${slug}`,
       publishedTime: post.date,

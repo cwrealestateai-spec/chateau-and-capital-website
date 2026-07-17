@@ -1,5 +1,5 @@
 /*
-  The Chateau & Capital logomark — an Ionic column capital, taken as
+  The Chateau & Capital logomark: an Ionic column capital, taken as
   vector paths from the official logo file. Inherits currentColor so it
   reproduces in sand, slate or ivory per the brand's positive/negative
   contrast rule.

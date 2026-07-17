@@ -8,14 +8,14 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
   openGraph: {
     images: "/opengraph-image",
-    title: "Contact — Chateau & Capital",
+    title: "Contact | Chateau & Capital",
     description:
-      "Begin a conversation with Chateau & Capital — development finance enquiries, investment partnerships, portfolio company matters and careers.",
+      "Begin a conversation with Chateau & Capital: development finance enquiries, investment partnerships, portfolio company matters and careers.",
     url: "/contact",
   },
   title: "Contact",
   description:
-    "Begin a conversation with Chateau & Capital — development finance enquiries, investment partnerships, portfolio company matters and careers.",
+    "Begin a conversation with Chateau & Capital: development finance enquiries, investment partnerships, portfolio company matters and careers.",
 };
 
 const channels = [
@@ -90,7 +90,7 @@ export default function ContactPage() {
                   <Eyebrow>A Note on Pace</Eyebrow>
                   <p className="mt-4 text-sm leading-relaxed text-mist">
                     We move deliberately by design. Serious enquiries receive a
-                    substantive reply — typically within five working days.
+                    substantive reply, typically within five working days.
                   </p>
                 </div>
               </Reveal>

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/insights" },
   openGraph: {
     images: "/opengraph-image",
-    title: "Insights — Chateau & Capital",
+    title: "Insights | Chateau & Capital",
     description:
       "Research and perspective from Chateau & Capital on real estate, capital markets, urban development, artificial intelligence, leadership and execution.",
     url: "/insights",
@@ -26,7 +26,7 @@ export default function InsightsPage() {
       <PageHero
         eyebrow="Insights"
         title="Thinking, published."
-        lede="Research and perspective from inside the firm — on the markets we invest in, the cities we help build and the disciplines that make businesses endure."
+        lede="Research and perspective from inside the firm, covering the markets we invest in, the cities we help build and the disciplines that make businesses endure."
       />
 
       <section className="py-24 md:py-32">

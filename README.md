@@ -1,6 +1,6 @@
 # Chateau & Capital
 
-The official website of Chateau & Capital — a private operating investment
+The official website of Chateau & Capital, a private operating investment
 company and development finance platform headquartered in Lagos, Nigeria.
 
 Built with Next.js 15, TypeScript, Tailwind CSS v4 and Framer Motion.
@@ -28,8 +28,8 @@ STATIC_EXPORT=1 NEXT_PUBLIC_BASE_PATH=/<repo-name> npm run build
 
 ## Editing content
 
-All copy and data — portfolio companies, insight articles, capabilities,
-navigation — live in [`lib/content.ts`](lib/content.ts). Add an entry there
+All copy and data, portfolio companies, insight articles, capabilities,
+navigation, live in [`lib/content.ts`](lib/content.ts). Add an entry there
 and every page updates; no design work required.
 
 Brand rules and architecture notes for AI-assisted development are in

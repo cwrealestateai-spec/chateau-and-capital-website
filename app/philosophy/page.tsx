@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/philosophy" },
   openGraph: {
     images: "/opengraph-image",
-    title: "Our Philosophy — Chateau & Capital",
+    title: "Our Philosophy | Chateau & Capital",
     description:
       "Capital alone does not build great companies. People do. Systems do. Culture does. The investment principles that guide every Chateau & Capital decision.",
     url: "/philosophy",
@@ -47,7 +47,7 @@ export default function PhilosophyPage() {
                   <p className="text-base leading-relaxed text-mist">
                     Every investment should become stronger every year. Every
                     business should become more valuable every year. This is
-                    not a slogan — it is the test we apply to budgets, hires,
+                    not a slogan; it is the test we apply to budgets, hires,
                     acquisitions and exits alike.
                   </p>
                   <p className="text-base leading-relaxed text-mist">
@@ -68,7 +68,7 @@ export default function PhilosophyPage() {
             <SectionHeading
               eyebrow="Investment Principles"
               title="Thirteen commitments, held permanently"
-              lede="Written down so they can be enforced — by our partners, our teams and the record itself."
+              lede="Written down so they can be enforced, by our partners, our teams and the record itself."
             />
           </Reveal>
           <div className="mt-16 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">

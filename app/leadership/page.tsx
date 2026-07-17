@@ -11,14 +11,14 @@ export const metadata: Metadata = {
   alternates: { canonical: "/leadership" },
   openGraph: {
     images: "/opengraph-image",
-    title: "Leadership — Chateau & Capital",
+    title: "Leadership | Chateau & Capital",
     description:
-      "Chateau & Capital is led by founder and chief executive Delani Adewuyi — stewardship over celebrity, systems over heroics, and a standard built to outlast any individual.",
+      "Chateau & Capital is led by founder and chief executive Delani Adewuyi: stewardship over celebrity, systems over heroics, and a standard built to outlast any individual.",
     url: "/leadership",
   },
   title: "Leadership",
   description:
-    "Chateau & Capital is led by founder and chief executive Delani Adewuyi — stewardship over celebrity, systems over heroics, and a standard built to outlast any individual.",
+    "Chateau & Capital is led by founder and chief executive Delani Adewuyi: stewardship over celebrity, systems over heroics, and a standard built to outlast any individual.",
 };
 
 const tenets = [
@@ -28,7 +28,7 @@ const tenets = [
   },
   {
     title: "Governance as practice",
-    body: "Boards that meet, minutes that bind, metrics that are owned. Governance here is not compliance theatre — it is how the firm actually runs.",
+    body: "Boards that meet, minutes that bind, metrics that are owned. Governance here is not compliance theatre; it is how the firm actually runs.",
   },
   {
     title: "Operators in the room",
@@ -46,7 +46,7 @@ export default function LeadershipPage() {
       <PageHero
         eyebrow="Leadership"
         title="Led with conviction. Built to outlast it."
-        lede="Chateau & Capital is led by its founder and held to a standard designed to survive any individual — including him."
+        lede="Chateau & Capital is led by its founder and held to a standard designed to survive any individual, including him."
       />
 
       {leadership.map((leader) => (
@@ -145,7 +145,7 @@ export default function LeadershipPage() {
                 <p className="mt-8 max-w-2xl text-base leading-relaxed text-mist">
                   Their detailed profiles are shared with counterparties in the
                   course of an engagement. If you are considering working with
-                  us — as an investor, developer, founder or future colleague —
+                  us, as an investor, developer, founder or future colleague,
                   we would welcome the introduction.
                 </p>
               </Reveal>

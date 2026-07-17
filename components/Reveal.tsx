@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 
 /*
   Single scroll-reveal used across the site: a quiet 16px rise and fade.
-  Deliberately restrained — no scale, no blur, no parallax.
+  Deliberately restrained: no scale, no blur, no parallax.
 */
 export function Reveal({
   children,

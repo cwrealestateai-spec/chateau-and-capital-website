@@ -26,7 +26,7 @@ export async function generateMetadata({
     alternates: { canonical: `/portfolio/${slug}` },
     openGraph: {
     images: "/opengraph-image",
-      title: `${company.name} — Chateau & Capital`,
+      title: `${company.name} | Chateau & Capital`,
       description: company.summary,
       url: `/portfolio/${slug}`,
     },

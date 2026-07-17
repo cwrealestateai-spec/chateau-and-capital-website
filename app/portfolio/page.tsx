@@ -10,14 +10,14 @@ export const metadata: Metadata = {
   alternates: { canonical: "/portfolio" },
   openGraph: {
     images: "/opengraph-image",
-    title: "Portfolio — Chateau & Capital",
+    title: "Portfolio | Chateau & Capital",
     description:
-      "The Chateau & Capital portfolio — companies built to endure, each retaining its own identity while drawing on shared institutional strength.",
+      "The Chateau & Capital portfolio: companies built to endure, each retaining its own identity while drawing on shared institutional strength.",
     url: "/portfolio",
   },
   title: "Portfolio",
   description:
-    "The Chateau & Capital portfolio — companies built to endure, each retaining its own identity while drawing on shared institutional strength.",
+    "The Chateau & Capital portfolio: companies built to endure, each retaining its own identity while drawing on shared institutional strength.",
 };
 
 export default function PortfolioPage() {
@@ -42,7 +42,7 @@ export default function PortfolioPage() {
               <p className="text-base leading-relaxed text-mist md:col-span-6">
                 The portfolio is built to grow. We are always in conversation
                 with founders, owners and management teams whose businesses
-                deserve a permanent home — and whose ambitions outlast a fund
+                deserve a permanent home, and whose ambitions outlast a fund
                 cycle. If that describes yours, we would like to hear from you.
               </p>
             </div>

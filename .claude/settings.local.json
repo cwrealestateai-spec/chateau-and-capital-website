@@ -41,7 +41,9 @@
       "Bash(sips -s format jpeg -s formatOptions 85 -Z 1600 \"/Users/cwrealestateai/Downloads/DC1D6981-01E5-48D3-888F-041DD5D73897.PNG\" --out public/leadership/delani-adewuyi.jpg)",
       "Bash(sips -g pixelWidth -g pixelHeight public/leadership/delani-adewuyi.jpg)",
       "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -qm 'Leadership: add Delani Adewuyi portrait beneath name *)",
-      "Bash(break)"
+      "Bash(break)",
+      "Bash(python3 -)",
+      "Bash(git -c user.name=CW -c user.email=cwrelagos@gmail.com commit -qm 'Remove all em dashes from copy, titles and metadata *)"
     ]
   }
 }

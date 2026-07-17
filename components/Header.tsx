@@ -47,7 +47,7 @@ export function Header() {
         <div className="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-6 md:px-10">
           <Link
             href="/"
-            aria-label="Chateau & Capital — Home"
+            aria-label="Chateau & Capital home"
             className={open ? "text-on-slate" : "text-ink"}
           >
             <Wordmark />
@@ -147,7 +147,7 @@ export function Header() {
                 </ul>
               </nav>
               <p className="eyebrow mt-16 text-on-slate-mist">
-                Lagos · Nigeria — Est. for generations
+                Lagos · Nigeria · Est. for generations
               </p>
             </div>
           </motion.div>

@@ -6,7 +6,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import type { PortfolioCompany } from "@/lib/content";
 
 /*
-  Expandable portfolio cards. Built to take any number of companies —
+  Expandable portfolio cards. Built to take any number of companies;
   the grid and interaction never need redesign as the portfolio grows.
 */
 export function PortfolioAccordion({

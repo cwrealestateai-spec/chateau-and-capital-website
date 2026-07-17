@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/careers" },
   openGraph: {
     images: "/opengraph-image",
-    title: "Careers — Chateau & Capital",
+    title: "Careers | Chateau & Capital",
     description:
       "Build a career measured in decades. Chateau & Capital hires operators, investors, engineers and governance professionals who want their work to compound.",
     url: "/careers",
@@ -30,7 +30,7 @@ export default function CareersPage() {
       <PageHero
         eyebrow="Careers"
         title="Do the best work of your life. Then keep it."
-        lede="Most careers are a sequence of employers. Ours are built differently: people who join Chateau & Capital build institutions they can point to for the rest of their lives — and stay to see the compounding."
+        lede="Most careers are a sequence of employers. Ours are built differently: people who join Chateau & Capital build institutions they can point to for the rest of their lives, and stay to see the compounding."
       />
 
       <section className="py-24 md:py-32">

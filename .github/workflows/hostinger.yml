@@ -1,0 +1,51 @@
+name: Build Hostinger dist branch
+
+# Rebuilds the root-domain static export on every push to main and
+# force-pushes it to the `hostinger-dist` branch, which hPanel's Git
+# deployment pulls into public_html. If a HOSTINGER_WEBHOOK secret is
+# set, the deploy is triggered automatically; otherwise press Deploy
+# in hPanel (Advanced -> GIT) after a push.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hostinger-dist
+  cancel-in-progress: true
+
+jobs:
+  dist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+        env:
+          STATIC_EXPORT: "1"
+      - name: Push export to hostinger-dist
+        run: |
+          cd out
+          git init -b hostinger-dist
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Hostinger dist — built from ${GITHUB_SHA::7}"
+          git push --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" hostinger-dist
+      - name: Trigger Hostinger deploy webhook (if configured)
+        env:
+          WEBHOOK: ${{ secrets.HOSTINGER_WEBHOOK }}
+        run: |
+          if [ -n "$WEBHOOK" ]; then
+            curl -fsS -X POST "$WEBHOOK" && echo "Hostinger deploy triggered"
+          else
+            echo "No HOSTINGER_WEBHOOK secret set — press Deploy in hPanel"
+          fi
